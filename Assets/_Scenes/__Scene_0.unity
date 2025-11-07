@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e58b265a06034356b13ba5ddb7c9c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 40
   rollMult: -45
   pitchMult: 30
   projectilePrefab: {fileID: 8884485313326729009, guid: 93cdb1254cc5842aeb5402d7b9f73a99, type: 3}
@@ -747,9 +747,9 @@ MonoBehaviour:
     weaponModelPrefab: {fileID: 919132149155446097, guid: 0522e2d6add5631469273543744ebf7f, type: 3}
     projectilePrefab: {fileID: 8884485313326729009, guid: 93cdb1254cc5842aeb5402d7b9f73a99, type: 3}
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
-    damageOnHit: 1
+    damageOnHit: 10
     damagePerSec: 0
-    delayBetweenShots: 0.2
+    delayBetweenShots: 0.25
     velocity: 50
   - type: 2
     letter: S
@@ -757,7 +757,7 @@ MonoBehaviour:
     weaponModelPrefab: {fileID: 919132149155446097, guid: 8b6e5debbe11f9241ade9814e3d16d70, type: 3}
     projectilePrefab: {fileID: 8884485313326729009, guid: 93cdb1254cc5842aeb5402d7b9f73a99, type: 3}
     projectileColor: {r: 0.18039216, g: 0.8784314, b: 0.85490197, a: 1}
-    damageOnHit: 1
+    damageOnHit: 10
     damagePerSec: 0
     delayBetweenShots: 0.4
     velocity: 50
@@ -772,6 +772,56 @@ MonoBehaviour:
     delayBetweenShots: 0
     velocity: 50
   powerUpFrequency: 01000000010000000200000006000000
+  useTimedWaves: 1
+  waves:
+  - waveName: Warm-Up
+    startTime: 0
+    enemies:
+    - {fileID: 2081532115668943053, guid: 9c29a07279b374e2aaf7a015da15211e, type: 3}
+    - {fileID: 2081532115668943053, guid: 9c29a07279b374e2aaf7a015da15211e, type: 3}
+    - {fileID: 2081532115668943053, guid: 9c29a07279b374e2aaf7a015da15211e, type: 3}
+    spawnInterval: 0.4
+  - waveName: Sine Wave Attack
+    startTime: 10
+    enemies:
+    - {fileID: 3319825933102930435, guid: ac8336763c0c047aca9a469c10d3f448, type: 3}
+    - {fileID: 3319825933102930435, guid: ac8336763c0c047aca9a469c10d3f448, type: 3}
+    - {fileID: 2081532115668943053, guid: 9c29a07279b374e2aaf7a015da15211e, type: 3}
+    - {fileID: 3319825933102930435, guid: ac8336763c0c047aca9a469c10d3f448, type: 3}
+    spawnInterval: 0.5
+  - waveName: Medium
+    startTime: 20
+    enemies:
+    - {fileID: 4070209521177695457, guid: 10ae278da906f451594d7989d76b6d15, type: 3}
+    - {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+    - {fileID: 4070209521177695457, guid: 10ae278da906f451594d7989d76b6d15, type: 3}
+    - {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+    spawnInterval: 0.6
+  - waveName: Mini_Boss
+    startTime: 25
+    enemies:
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    spawnInterval: 0.7
+  - waveName: Boss Intro
+    startTime: 30
+    enemies:
+    - {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+    - {fileID: 4070209521177695457, guid: 10ae278da906f451594d7989d76b6d15, type: 3}
+    - {fileID: 3319825933102930435, guid: ac8336763c0c047aca9a469c10d3f448, type: 3}
+    - {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    - {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+    spawnInterval: 0.4
+  - waveName: Final
+    startTime: 40
+    enemies:
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    - {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+    spawnInterval: 0.8
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
